@@ -1,0 +1,100 @@
+@font-face{
+    font-family: "suisse";
+    src: url("../SuisseIntl-Book.woff2") format("woff2"),
+        url("../SuisseIntl-Book.woff") format("woff");
+    font-weight:normal;
+    font-style:normal
+    }
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'suisse', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.grid {
+    overflow: hidden;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 0;
+}
+
+.grid_item {
+    position: relative;
+	display: inline-block;
+	vertical-align: top;
+    width: 100%;
+    border-right: 10px transparent solid;;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 900px) {
+    .grid_item {
+        width: 50%;
+    }
+
+    .grid_item.__wide {
+        width: 100%;
+    }
+}
+
+.grid_item.__square figure,
+.grid_item.__half-square figure {
+    width: 100%;
+    padding-bottom: 100%;
+    background: #f0f0f0;
+}
+
+.grid_item.__half-square figure {
+    padding-bottom: 50%;
+}
+
+.grid_item.__square img,
+.grid_item.__square video,
+.grid_item.__half-square img,
+.grid_item.__half-square video {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+fugure video {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+figure {
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+    font-size: 25px;
+    line-height: 1;
+}
+
+@media (min-width: 900px) {
+    p {
+        font-size: 5vw;
+    }
+}
+
+figure + p {
+	margin-bottom: 1em;
+}
